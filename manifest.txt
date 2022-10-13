@@ -1,0 +1,34 @@
+since you can't comment in a manifest file I'll do it here
+
+{
+    "manifest_version": 3,                             //delcare the version of the chrome extension we're building
+    "name": "mochi pet",                                 //give the extension a name
+    "description": "Best Browser Buddy",               //short description of the chrome extension
+    "version": "0.6.9",                                //version of the chrome extension (in this case 0.6.9 because the chrome extension isn't ready to be published )
+    
+    "content_scripts":[{                               //inject these files into the web page (these files will directly talk to the webpage)
+        "matches": ["<all_urls>"],                     //uploads content scripts to 'all_urls' (meaning every website the google chrome allows you to access) (based on host_permissions)
+        "css": ["./background/buddy.css"],             //styling for html injected onto the page
+        "js": ["./background/buddy.js",                //all the js files injected on the page
+               "./background/physics.js",   
+               "./background/entity.js"], 
+        "run_at": "document_end"                       //injects after web page finishes initializing
+    }],
+    "permissions": [                                   //what the chrome extension has access too and what it's allowed to do
+        "scripting",                                   //allows us to write onto the page
+        "activeTab",                                   //allows us to write into the current visible tab
+        "notifications",                               //allows us to send notifications to the user through chrome
+        "alarms",                                      //set alarms from chrome
+        "storage"                                      //allows us to store data into chrome.sync or local storage
+    ],
+    "host_permissions": ["<all_urls>"],                //lets us 'talk' to every available website
+    "web_accessible_resources":[{                      //allows us to save/upload images folder into every available website
+        "resources": ["/images/*", "/popupMenu/*"],
+        "matches": ["<all_urls>"]
+    }],
+    "icons": {"16":"./images/icons/icon16.png"},       //icon for chrome extension 
+    "action": {
+        "default_icon": "./images/icons/icon16.png",   //default icon image to use
+        "default_popup": "./popupMenu/popup.html"      //html file for chrome extension popup
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MOCHI</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- contatins everything inside out app -->
+  <div class='inner'>
+    <!-- Navigation -->
+    <div id="tab1" class="tabcontent" style="display: inline;">
+      <!--       each section of the app -->
+      <div style = 'display:flex;'>
+        <div class='module'>
+          <div class="heading">
+            <div>
+              <h1 class="logo">MY MOCHI</h1>
+              <span class="version">v(0.6.9)</span>
+            </div>
+          </div>
+        </div>
+        <div class='module' style = "margin: 0px 0px 10px 10px" style = "padding:0px">
+          <div class = heading>
+            <img src='./popImg/appIcon.PNG' class='headIcon'>
+          </div>
+        </div>
+        
+      </div>
+      <div class='module'>
+        <h3>Mold Your Mochi</h3>
+        <div>
+          <input placeholder="name" id='addName'></input>
+          <input placeholder="colour" id='addColour'></input>
+        </div>
+        <div class='access'>
+          <button class='addAcc'>accessories</button>
+          <img src='https://www.sico.ca/cms/getmedia/262f5021-4771-41e1-bf6e-a76a45a36cce/swatch_sky-blue__6001-31-.png' class='accIcon'>
+        </div>
+      </div>
+      <div class='module'>
+        <div class="viewMochi">
+          <h3>Mochi:&nbsp</h3>
+          <h3 id="viewMochiName"></h3>
+        </div>
+        <div>
+          <img src='./popImg/appLogo.PNG' class='viewMochiImg'>
+        </div>
+      </div>
+      <div class='module' style="margin:0px">
+        <button class='makeMochi' id = 'onButton'>
+          <h2>MAKE MOCHI</h2>
+        </button>
+      </div>
+    </div>
+
+    <div id="tab2" class="tabcontent" style="display: none;">
+      <div class='module'>
+        <button class='makeMochi' id = 'offButton'>
+          <h2>Delete Pet</h2>
+        </button>
+      </div>
+
+      <div class='module'>
+        <h3>Developer Tools</h3>
+        <!-- <button id="onButton">Create Pet</button> -->
+        <button id="offButton">Delete Pet</button>
+        <button id="doPause">Pause Time</button>
+        <button id="doDebug">Debug Console</button>
+        <button id="120frame">120 frames</button>
+        <button id="60frame">60 frames</button>
+        <button id="30frame">30 frames</button>
+      </div>
+    </div>
+
+    <div id="tab3" class="tabcontent" style="display: none;">
+      <div class = 'module'>
+        <h2>Account Details</h2>
+      </div>
+    </div>
+
+
+
+  </div>
+  <div class='outer'>
+    <div class="nav">
+        <button id='b0'>
+        <img src='./popImg/icons/home.PNG'>
+        </button>
+        <button id='b1'>
+        <img src='./popImg/icons/custom.PNG'>
+        </button>
+        <button id='b2'>
+        <img src='./popImg/icons/account.PNG'>
+        </button>
+    </div>
+  </div>
+  <script src="inject.js"></script>
+  <script src="./tabs/tab1.js"></script>
+  <script src="./tabs/tab2.js"></script>
+  <script src="./tabs/tab3.js"></script>
+</body>
+
+</html>

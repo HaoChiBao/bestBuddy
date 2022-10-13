@@ -1,0 +1,200 @@
+/* this took a ridiculous amount of time for the amount of code there is */
+html, body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin: 0px;
+    padding: 1px;
+    height: 561px;
+    width: 332px;
+    background-color: rgba(51,51,51,255);
+  }
+  /* contains everythingi n a tab */
+  .inner {
+    border: 5px solid rgba(51,51,51,255);
+    height: 500px;
+    width: 300px;
+    padding: 0px 10px 0px 10px;
+    border-radius: 20px;
+    background-color: rgba(247,244,239,255);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    z-index: 10;
+    justify-content:center;
+  }
+  
+  .inner::-webkit-scrollbar{
+    display:none;
+  }
+  
+  .outer{
+    border: 5px solid rgba(51,51,51,255);
+    height: 550px;
+    width: 300px;
+    padding: 0px 10px 0px 10px;
+    border-radius: 20px;
+    background-color: rgba(51,51,51,255);
+    overflow: hidden;
+    position: absolute;
+    margin: 0px;
+    justify-content:center;
+  }
+  
+  .module{
+    border-radius: 20px;
+    padding: 13px;
+    margin: 0px 0px 10px 0px;
+    background-color: #e6e6e6;
+    overflow: hidden;
+    text-align:center;
+  }
+  
+  .module h3{
+    margin: 0px 0px 10px 0px;
+  }
+  
+  .module input{
+    border: 0px;
+    border-radius: 10px;
+    height: 26px;
+    padding: 5px;
+    width: 90%;
+    background-color: rgba(247,244,239,255);
+    margin: 0px 0px 10px 0px
+  }
+  
+  .module input:focus{
+    outline: none;
+  }
+  
+  .module .addAcc{
+    border: 0px;
+    border-radius: 10px;
+    height: 36px;
+    padding: 5px;
+    width: 77%;
+    background-color: rgba(247,244,239,255);
+    margin: 0px 10px 10px 0px;
+    color: #707070;
+  }
+  
+  .module .addAcc:hover{
+    background-color: rgba(51,51,51,255);
+    color: rgba(247,244,239,255);
+    transition: 0.3s;
+  }
+  
+  .module .addAcc:active{
+    background-color: #707070;
+    color: rgba(247,244,239,255);
+    transition: 0.2s;
+  }
+  
+  .module .accIcon{
+    height: 30px;
+    width: 30px;
+    border: 3px solid rgba(247,244,239,255);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .module .access{
+    display: flex;
+    justify-content:center;
+  }
+  
+  .viewMochi{
+    justify-content:center;
+    display: flex;
+  }
+  
+  .viewMochiImg{
+  /*   height: 30px; */
+    width: 90%;
+    border: 5px solid #707070;
+    border-radius: 10px;
+    margin: 0px 0px 10px 0px
+  }
+  
+  .heading{
+    text-align: center;
+  }
+  
+  .heading h1{
+    margin: 5px;
+  }
+  .heading img{
+    width: 85px;
+    margin: 10px 0px 0px 0px;
+   border-radius: 10px;
+  }
+  /* Style the tab */
+  .nav {
+    overflow: hidden;
+    background-color: rgba(51,51,51,255);
+    position: absolute;
+    bottom: 0;
+    margin: 0px 0px 0px -10px;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+  }
+  
+  .nav img{
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .nav button {
+    background-color: inherit;
+    margin: 0;
+    border: none;
+    overflow:hidden;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.3s;
+  }
+  
+  .nav img{
+    border-radius: 5px;
+  }
+  
+  
+  .nav button:hover {
+    background-color: #1a1a1a;
+  }
+  
+  .nav button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    padding: 5px;
+  }
+  
+  .makeMochi{
+    height: 60px;
+    width: 100%;
+    border:0px;
+    justify-content:center;
+    text-align:center;
+    border-radius: 10px;
+  }
+  
+  .makeMochi:hover{
+    background-color: rgba(51,51,51,255);
+    color: rgba(247,244,239,255);
+    transition: 0.3s;
+  }
+  
+  .makeMochi:active{
+    background-color: #707070;
+    color: rgba(247,244,239,255);
+    transition: 0.2s;
+  }

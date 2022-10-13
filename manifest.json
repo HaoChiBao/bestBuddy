@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "mochi pet",
+    "description": "Best Browser Buddy",
+    "version": "0.9.8",
+    
+    "content_scripts":[{
+        "matches": ["<all_urls>"],
+        "css": ["./background/buddy.css"],
+        "js": ["./background/buddy.js", "./background/physics.js", "./background/entity.js"],
+        "run_at": "document_end"
+    }],
+    "permissions": [
+        "scripting",
+        "activeTab",
+        "notifications",
+        "alarms",
+        "storage"
+    ],
+    "host_permissions": ["<all_urls>"],
+    "web_accessible_resources":[{
+        "resources": ["/images/*", "/popupMenu/*"],
+        "matches": ["<all_urls>"]
+    }],
+    "icons": {"16":"./images/icons/icon16.png"},
+    "action": {
+        "default_icon": "./images/icons/icon16.png",
+        "default_popup": "./popupMenu/popup.html"
+    }
+}
